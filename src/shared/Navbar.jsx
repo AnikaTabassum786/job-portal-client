@@ -51,6 +51,11 @@ const Navbar = () => {
   className={({ isActive }) =>
    isActive ? "active font-bold mr-2" : ""
   }> <a className="btn">Register</a></NavLink>
+
+  <NavLink to="/login"
+  className={({ isActive }) =>
+   isActive ? "active font-bold mr-2" : ""
+  }> <a className="btn">Login</a></NavLink>
   </div>
 </div>
         </div>
