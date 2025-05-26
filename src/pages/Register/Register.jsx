@@ -16,7 +16,7 @@ const Register = () => {
 
     createUser(email,password)
     .then(result=>{
-      console.log(result.user)
+      console.log(result.user,'registration done')
     })
     .catch((error)=>{
       console.log(error.message,error.code)
