@@ -5,7 +5,7 @@ import Navbar from '../shared/Navbar';
 
 const RootLayout = () => {
     return (
-        <div>
+        <div className='container mx-auto'>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
