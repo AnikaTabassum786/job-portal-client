@@ -68,12 +68,12 @@ const Navbar = () => {
             <div><NavLink to="/register"
               className={({ isActive }) =>
                 isActive ? "active font-bold mr-2" : ""
-              }> <a className="btn">Register</a></NavLink>
+              }> <button className="btn">Register</button></NavLink>
 
               <NavLink to="/login"
                 className={({ isActive }) =>
                 isActive ? "active font-bold mr-2" : ""
-              }> <a className="btn">Login</a></NavLink></div>
+              }> <button className="btn">Login</button></NavLink></div>
           }
 
         </div>
