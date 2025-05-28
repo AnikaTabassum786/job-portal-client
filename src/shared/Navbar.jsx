@@ -19,7 +19,8 @@ const Navbar = () => {
 
   const links = (
     <>
-      <NavLink
+     <li>
+       <NavLink
         to="/"
         className={({ isActive }) =>
           isActive ? "active font-bold mr-2" : ""
@@ -27,14 +28,12 @@ const Navbar = () => {
       >
         Home
       </NavLink>
-      {/* <NavLink
-  to="/about"
-  className={({ isActive }) =>
-   isActive ? "active font-bold mr-2" : ""
-  }
->
-  About
-</NavLink> */}
+     </li>
+
+     {
+      user && <li><NavLink to='/myApplications'>My Application</NavLink></li>
+     }
+
     </>
   );
 
