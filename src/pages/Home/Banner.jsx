@@ -8,10 +8,6 @@ const Banner = () => {
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className='flex-1'>
-                    {/* <img
-                    src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-                    className="max-w-sm rounded-lg shadow-2xl"
-                /> */}
                     <motion.img 
                     animate={{y:[100,150,100]}}
                     transition={{duration:5, repeat:Infinity}}
@@ -37,7 +33,7 @@ const Banner = () => {
                         initial={{ scale: 0 }}
                         animate={{ scale: 1, transition: { duration: 4 } }}
                         // transition= {{duration: 2}}
-                        className="text-5xl font-bold">Remote
+                        className="text-5xl font-bold">Remote 
                         <motion.span
                             animate={
                                 {

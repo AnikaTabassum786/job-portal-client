@@ -11,7 +11,9 @@ const Home = () => {
             This is Home page
             <div>
                 <Banner></Banner>
-                <Hotjob></Hotjob>
+               
+                    <Hotjob></Hotjob>
+               
             </div>
         </div>
     );

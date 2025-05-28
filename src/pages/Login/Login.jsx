@@ -3,10 +3,16 @@ import loginAnimation from '../../assets/lottie/login.json'
 import Lottie from 'lottie-react';
 import { AuthContext } from '../../contexts/AuthContext';
 import SocialLogin from '../../shared/SocialLogin';
+import { useLocation, useNavigate } from 'react-router';
 
 const Login = () => {
 
-  const { signInUser } = use(AuthContext)
+  const { signInUser } = use(AuthContext);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const from = location.state || '/';
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -18,6 +24,7 @@ const Login = () => {
     signInUser(email, password)
       .then(result => {
         console.log(result.user,'Log in done')
+        navigate(from)
       })
       .catch((error) => {
         console.log(error.message, error.code)
@@ -45,7 +52,7 @@ const Login = () => {
               <input name='password' type="password" className="input" placeholder="Password" />
               <div><a className="link link-hover">Forgot password?</a></div>
               <button className="btn btn-neutral mt-4">Login</button>
-              <SocialLogin></SocialLogin>
+              <SocialLogin from={from}></SocialLogin>
             </form>
           </div>
         </div>
