@@ -30,8 +30,15 @@ const Navbar = () => {
       </NavLink>
      </li>
 
+     {/* for applicant links. */}
      {
       user && <li><NavLink to='/myApplications'>My Application</NavLink></li>
+     }
+
+
+      {/* for recruiter links. */}
+     {
+      user && <li><NavLink to='/addJob'>Add Job</NavLink></li>
      }
 
     </>
