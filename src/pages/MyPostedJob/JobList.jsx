@@ -1,4 +1,5 @@
 import React, { use } from 'react';
+import { Link } from 'react-router';
 
 const JobList = ({jobsCreatedByPromise}) => {
     const jobs = use(jobsCreatedByPromise)
@@ -13,7 +14,7 @@ const JobList = ({jobsCreatedByPromise}) => {
               <th>#</th>
               <th>Name</th>
               <th>Deadline</th>
-              <th>Favorite Color</th>
+              <th>View Application</th>
             </tr>
           </thead>
           <tbody>
@@ -22,7 +23,7 @@ const JobList = ({jobsCreatedByPromise}) => {
                 <th>{index + 1}</th>
                 <td>{job.title}</td>
                 <td>{job.deadline}</td>
-                <td>Blue</td>
+                <td><Link to={`/applications/${job._id}`}>View Application</Link></td>
               </tr>
             ))}
           </tbody>
