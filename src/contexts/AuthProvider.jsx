@@ -35,14 +35,11 @@ const AuthProvider = ({ children }) => {
             setLoading(false);
             if (currentUser?.email) {
                 const userData = { email: currentUser.email }
-                axios.post('', userData)
-                    .then(res => {
-                        console.log('Token After jwt', res.data)
-                        // localStorage
-                        const token = res.data.token;
-                        localStorage.setItem('token',token)
-                    })
-                    .cath(error => console.log(error))
+                axios.post('http://localhost:3000/jwt',userData,{withCredentials:true})
+                .then(res=>{
+                    console.log(res.data)
+                })
+                .catch(error=>console.log(error))
             }
 
             console.log('user in the auth state change', currentUser)
